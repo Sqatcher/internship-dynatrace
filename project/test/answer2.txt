@@ -1,0 +1,10 @@
+sles 15 4765
+amazon-linux 2010.11 4595
+windows-server 2003-SP2 4465
+rhel 7 3855
+windows 10, version 1507 3731
+windows-embedded Compact 2013 3713
+eurolinux 9 3670
+almalinux 9 3659
+oraclelinux 9 3648
+centos 7 3647

@@ -1,0 +1,64 @@
+[
+  {
+    "name": "almalinux",
+    "versions": [
+      {
+        "cycle": "9",
+        "releaseDate": "2022-05-26",
+        "eol": "2022-05-31",
+        "latest": "9.1",
+        "link": "https://almalinux.org/blog/almalinux-91-now-available/",
+        "lts": false
+      },
+      {
+        "cycle": "8",
+        "releaseDate": "2021-02-28",
+        "eol": "2021-04-01",
+        "latest": "8.7",
+        "link": "https://almalinux.org/blog/almalinux-87-now-available/",
+        "lts": false
+      }
+    ]
+  },
+  {
+    "name": "leagueoflegends",
+    "os": true,
+    "versions": [
+      {
+        "cycle": "11.2",
+        "releaseDate": "2021-05-26",
+        "support": "2027-05-31",
+        "eol": "2021-05-26",
+        "latest": "9.1",
+        "link": "https://almalinux.org/blog/almalinux-91-now-available/",
+        "lts": false
+      },
+      {
+        "cycle": "12.9",
+        "releaseDate": "2022-03-30",
+        "eol": "2022-04-10",
+        "latest": "8.7",
+        "link": "https://almalinux.org/blog/almalinux-87-now-available/",
+        "lts": false
+      }
+    ]
+  },
+  {
+    "name": "valorant",
+    "os": false,
+    "versions": [
+      {
+        "cycle": "3",
+        "releaseDate": "2023-01-03",
+        "eol": "2024-08-04",
+        "latest": "9.1",
+        "link": "https://almalinux.org/blog/almalinux-91-now-available/",
+        "lts": false
+      }
+    ]
+  },
+  {
+    "name": "Hearthstone",
+    "os": true
+  }
+]

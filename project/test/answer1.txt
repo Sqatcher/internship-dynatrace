@@ -1,0 +1,5 @@
+sles 15 4765
+amazon-linux 2010.11 4595
+windows-server 2003-SP2 4465
+rhel 7 3855
+windows 10, version 1507 3731
