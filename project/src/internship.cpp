@@ -12,6 +12,7 @@ using json = nlohmann::json;
 using namespace date;
 using namespace std::chrono;
 
+// class used to hold only the most important OSes
 class Holder {
 public:
     int* bestScores;
@@ -31,6 +32,7 @@ public:
         }
     }
 
+    // insert the new contender at the right spot
     void addBest(int contender, std::string name, std::string system)
     {
         if (bestScores[0] >= contender)
@@ -42,13 +44,13 @@ public:
         {
             if (bestScores[index] > contender)
             {
-                addToBestNames(name, system, index - 1);
+                addToBestNames(name, system, index - 1);    //index-1 since names are added after the right place has been found
                 return;
             }
             bestScores[index - 1] = bestScores[index];
             bestScores[index] = contender;
         }
-        addToBestNames(name, system, index - 1);
+        addToBestNames(name, system, index - 1);          //index-1 - same as above
     }
 
     void printScores()
@@ -57,7 +59,7 @@ public:
         for (i = maxsize-1; i >= 0; i--)
         {
             if (bestScores[i] == 0) break;
-            if (i != maxsize - 1)
+            if (i != maxsize - 1)             // as far as I understand, trailing endline is not allowed
             {
                 std::cout << std::endl;
             }
@@ -74,7 +76,7 @@ public:
     {
         std::vector<std::string> names1;
         std::vector<std::string> names2;
-        int flag = 1;
+        int flag = 1;                       // flag - offset until after the new element is inserted
         for (int i = 0; i < maxsize; i++)
         {
             if (i == index)
@@ -94,9 +96,10 @@ public:
 };
 
 namespace internship {
+    // simple date validation
     int checkDate(int year, int month, int day)
     {
-        if (year < 1500) return 0;
+        if (year < 1492) return 0;
         if (month < 1 || month > 12) return 0;
         if (day < 1 || day > 31) return 0;
         return 1;
@@ -144,10 +147,12 @@ namespace internship {
                 sscanf(endDate.c_str(), "%4d%c%2d%c%2d", &yearE, &delim, &monthE, &delim, &dayE);
                 if (!checkDate(yearE, monthE, dayE)) continue;
 
+                // count day difference
                 auto x = year{ yearR } / monthR / dayR;
                 auto y = year{ yearE } / monthE / dayE;
                 int diff = (sys_days{ y } - sys_days{ x }).count() + 1;
 
+                // store only the best score for the OS
                 if (localBest < diff)
                 {
                     localBest = diff;
